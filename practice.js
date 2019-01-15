@@ -19,6 +19,9 @@ var arr = [10,20,30];
 
 //Code Here
 
+function first (arr){
+  return arr[0];
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -34,6 +37,11 @@ var arr = [40,50,60];
 
 //Code Here
 
+function last (arr){
+  var last = arr.length - 1;
+  return arr[last];
+  
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -49,6 +57,11 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 
 //Code Here
 
+function looper (family){
+  for (i = 0; i < family.length; i++){
+    alert(family[i])
+  }
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -64,7 +77,14 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 
 //Code Here
 
-
+function reversedLooper(letters){
+  var len = letters.length;
+  var num = len - 1;
+  for (i = num;i >= 0; i-- ){
+    alert(letters[i])
+  }
+}
+//reversedLopper([1,2,3]);
 
 ////////// PROBLEM 5 //////////
 
@@ -79,7 +99,10 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
 //Code Here
 
-
+function evenFinder(nums){
+  var newArray = nums.filter((nums => nums % 2 === 0));
+  return newArray;
+}
 
 
 
@@ -107,6 +130,17 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 //Code Here
 
+function divider(numberArray){
+  var newArr = [[],[]];
+  for (i = 0; i < numberArray.length; i++){
+    if (numberArray[i] % 2 === 0){
+      newArr[0].push(numberArray[i])
+    }else {
+      newArr[1].push(numberArray[i])
+    }
+  }
+  return newArr
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -128,6 +162,11 @@ var getRandomArbitrary = function() {
 
 //Code Here
 
+function finder(array){
+  var num = getRandomArbitrary();
+  var test = array.includes(num);
+  return test;
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -157,7 +196,27 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 
+function removeItem (myGroceryList, item){
+  if (!myGroceryList || !item){
+    return []
+  }
+  var len = myGroceryList.length - 1;
+  for (let i = len; i >= 0; i--){
+    if (myGroceryList[i] === item){
+      myGroceryList.splice(i, 1);
+    }
+  }
+  return myGroceryList;
+}
 
+function addItem(myGroceryList, item){
+  if (!myGroceryList || !item){
+    return []
+  }
+  myGroceryList.push(item);
+  return myGroceryList;
+
+}
 
 ////////// PROBLEM 9 //////////
 
@@ -166,6 +225,14 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+
+function maker(){
+  let arr = [];
+  for (i = 1; i <=215; i++){
+    arr.push(i);
+  }
+  return arr;
+}
 
 
 
@@ -183,7 +250,14 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   
 //Code Here
 
-
+function addTen(numbers){ 
+  var newArr = [];
+  for (let i = 0; i < numbers.length; i++){
+    var j = parseInt(numbers[i])
+    newArr.push(j + 10)
+    }
+  return newArr;
+}
 
 ////////// PROBLEM 11 //////////
 
@@ -208,7 +282,9 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 
-
+function longer (arr1, arr2){
+  return arr1.length > arr2.length ? arr1 : arr2;
+}
 
 /*
   As a continuation of the previous problem, write another function called 'both'.
@@ -220,7 +296,10 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 
-
+function both(arr1, arr2){
+  let sort = arr1.filter((element) => arr2.includes(element));
+  return sort;
+}
 
 ////////// PROBLEM 12 //////////
 
@@ -260,6 +339,7 @@ var colt = {
 
 //Code Here
 
+devMountainEmployees.push(tyler, cahlan, ryan, colt);
 
 
 /*
@@ -269,7 +349,12 @@ var colt = {
 
 //Code Here
 
-
+for (let i = 0; i < devMountainEmployees.length;i++){
+  if(devMountainEmployees[i].name === 'Cahlan'){
+    devMountainEmployees.splice(i,1);
+  }
+}
+console.log(devMountainEmployees)
 
 ////////// PROBLEM 13 //////////
 
@@ -281,7 +366,7 @@ var colt = {
 
 //Code Here
 
-
+var users = [];
 
 /*
   Now add three user objects to your users array. Each user object should contain the following properties. name, email, password, username.
@@ -291,15 +376,34 @@ var colt = {
 
 // Do not edit the code below.
 var user1 = {
-    name: 'Tyler McGinnis',
+    name: 'McGinnis',
     email: 'tylermcginnis33@gmail.com',
     password: 'iLoveJavaScript',
     username: 'infiniteLoop'
 };
 // Do not edit the code above.
+var user2 = {
+  name: 'bill',
+  email: 'tybbbbnnis33@gmail.com',
+  password: 'iLoveJavaScript',
+  username: 'infiniteLoop'
+};
+var user3 = {
+  name: 'Ted',
+  email: 'ted@gmail.com',
+  password: 'iLoveJavaScript',
+  username: 'infiniteLoop'
+};
+var user4 = {
+  name: 'love',
+  email: 't3@gmail.com',
+  password: 'iLoveJavaScript',
+  username: 'infiniteLoop'
+};
 
 //Code Here
 
+users.push(user1,user2,user3,user4)
 
 
 /*
